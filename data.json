@@ -1,0 +1,328 @@
+{
+    "Constructor": [
+      {
+        "id": 1,
+        "name": "Ferrari",
+        "year_founded": 1939,
+        "country": "Italy",
+        "championship_wins": 16,
+        "drivers": [
+          {
+            "id": 3,
+            "first_name": "Sebastian",
+            "last_name": "Vettel",
+            "date_of_birth": "1987-07-03",
+            "nationality": "German",
+            "current_team": "Ferrari",
+            "previous_teams": ["Toro Rosso", "Red Bull Racing"],
+            "race_wins": 53,
+            "pole_positions": 57
+          },
+          {
+            "id": 4,
+            "first_name": "Charles",
+            "last_name": "Leclerc",
+            "date_of_birth": "1997-10-16",
+            "nationality": "Monegasque",
+            "current_team": "Ferrari",
+            "previous_teams": ["Alfa Romeo", "Sauber"],
+            "race_wins": 5,
+            "pole_positions": 10
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Mercedes",
+        "year_founded": 1954,
+        "country": "Germany",
+        "championship_wins": 8,
+        "drivers": [
+          {
+            "id": 2,
+            "first_name": "Lewis",
+            "last_name": "Hamilton",
+            "date_of_birth": "1985-01-07",
+            "nationality": "British",
+            "current_team": "Mercedes",
+            "previous_teams": ["McLaren"],
+            "race_wins": 103,
+            "pole_positions": 104
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Red Bull Racing",
+        "year_founded": 2005,
+        "country": "Austria",
+        "championship_wins": 5,
+        "drivers": [
+          {
+            "id": 1,
+            "first_name": "Max",
+            "last_name": "Verstappen",
+            "date_of_birth": "1997-09-30",
+            "nationality": "Dutch",
+            "current_team": "Red Bull Racing",
+            "previous_teams": ["Toro Rosso"],
+            "race_wins": 65,
+            "pole_positions": 22
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "McLaren",
+        "year_founded": 1963,
+        "country": "United Kingdom",
+        "championship_wins": 8,
+        "drivers": [
+          {
+            "id": 5,
+            "first_name": "Lando",
+            "last_name": "Norris",
+            "date_of_birth": "1999-11-13",
+            "nationality": "British",
+            "current_team": "McLaren",
+            "previous_teams": []
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Aston Martin",
+        "year_founded": 2021,
+        "country": "United Kingdom",
+        "championship_wins": 0,
+        "drivers": [
+          {
+            "id": 6,
+            "first_name": "Fernando",
+            "last_name": "Alonso",
+            "date_of_birth": "1981-07-29",
+            "nationality": "Spanish",
+            "current_team": "Aston Martin",
+            "previous_teams": ["Renault", "Ferrari", "McLaren"],
+            "race_wins": 32,
+            "pole_positions": 22
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Alpine",
+        "year_founded": 2021,
+        "country": "France",
+        "championship_wins": 2,
+        "drivers": [
+          {
+            "id": 7,
+            "first_name": "Esteban",
+            "last_name": "Ocon",
+            "date_of_birth": "1996-09-17",
+            "nationality": "French",
+            "current_team": "Alpine",
+            "previous_teams": ["Force India", "Renault"],
+            "race_wins": 1,
+            "pole_positions": 0
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Alfa Romeo",
+        "year_founded": 1950,
+        "country": "Italy",
+        "championship_wins": 2,
+        "drivers": [
+          {
+            "id": 8,
+            "first_name": "Valtteri",
+            "last_name": "Bottas",
+            "date_of_birth": "1989-08-28",
+            "nationality": "Finnish",
+            "current_team": "Alfa Romeo",
+            "previous_teams": ["Williams", "Mercedes"],
+            "race_wins": 10,
+            "pole_positions": 20
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Haas",
+        "year_founded": 2016,
+        "country": "USA",
+        "championship_wins": 0,
+        "drivers": [
+          {
+            "id": 9,
+            "first_name": "Kevin",
+            "last_name": "Magnussen",
+            "date_of_birth": "1992-10-05",
+            "nationality": "Danish",
+            "current_team": "Haas",
+            "previous_teams": ["Renault", "McLaren"]
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Williams",
+        "year_founded": 1977,
+        "country": "United Kingdom",
+        "championship_wins": 9,
+        "drivers": [
+          {
+            "id": 10,
+            "first_name": "Alexander",
+            "last_name": "Albon",
+            "date_of_birth": "1996-03-23",
+            "nationality": "Thai",
+            "current_team": "Williams",
+            "previous_teams": ["Red Bull Racing"]
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "AlphaTauri",
+        "year_founded": 2020,
+        "country": "Italy",
+        "championship_wins": 0,
+        "drivers": [
+          {
+            "id": 11,
+            "first_name": "Yuki",
+            "last_name": "Tsunoda",
+            "date_of_birth": "2000-05-11",
+            "nationality": "Japanese",
+            "current_team": "AlphaTauri"
+          }
+        ]
+      }
+    ],
+    "Race": [
+      {
+        "id": 1,
+        "Circuit": {
+          "id": 1,
+          "name": "Monaco",
+          "country": "Monaco"
+        },
+        "year": 2023,
+        "winner": {
+          "id": 1,
+          "first_name": "Max",
+          "last_name": "Verstappen",
+          "nationality": "Dutch",
+          "current_team": "Red Bull Racing",
+          "previous_teams": ["Toro Rosso"],
+          "race_wins": 65,
+          "pole_positions": 22
+        },
+        "drivers": [
+          {
+            "id": 1,
+            "first_name": "Max",
+            "last_name": "Verstappen",
+            "nationality": "Dutch",
+            "current_team": "Red Bull Racing",
+            "race_wins": 65,
+            "pole_positions": 22
+          },
+          {
+            "id": 2,
+            "first_name": "Lewis",
+            "last_name": "Hamilton",
+            "nationality": "British",
+            "current_team": "Mercedes",
+            "race_wins": 103,
+            "pole_positions": 104
+          },
+          {
+            "id": 3,
+            "first_name": "Sebastian",
+            "last_name": "Vettel",
+            "nationality": "German",
+            "current_team": "Ferrari",
+            "race_wins": 53,
+            "pole_positions": 57
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "Circuit": {
+          "id": 2,
+          "name": "Silverstone",
+          "country": "United Kingdom"
+        },
+        "year": 2023,
+        "winner": {
+          "id": 2,
+          "first_name": "Lewis",
+          "last_name": "Hamilton",
+          "nationality": "British",
+          "current_team": "Mercedes",
+          "race_wins": 103,
+          "pole_positions": 104
+        },
+        "drivers": [
+          {
+            "id": 1,
+            "first_name": "Max",
+            "last_name": "Verstappen",
+            "nationality": "Dutch",
+            "current_team": "Red Bull Racing",
+            "race_wins": 65,
+            "pole_positions": 22
+          },
+          {
+            "id": 2,
+            "first_name": "Lewis",
+            "last_name": "Hamilton",
+            "nationality": "British",
+            "current_team": "Mercedes",
+            "race_wins": 103,
+            "pole_positions": 104
+          }
+        ]
+      }
+    ],
+    "Driver": [
+      {
+        "id": 1,
+        "first_name": "Max",
+        "last_name": "Verstappen",
+        "nationality": "Dutch",
+        "current_team": "Red Bull Racing",
+        "previous_teams": ["Toro Rosso"],
+        "race_wins": 65,
+        "pole_positions": 22
+      },
+      {
+        "id": 2,
+        "first_name": "Lewis",
+        "last_name": "Hamilton",
+        "nationality": "British",
+        "current_team": "Mercedes",
+        "race_wins": 103,
+        "pole_positions": 104
+      }
+    ],
+    "Circuit": [
+      {
+        "id": 1,
+        "name": "Monaco",
+        "country": "Monaco"
+      },
+      {
+        "id": 2,
+        "name": "Silverstone",
+        "country": "United Kingdom"
+      }
+    ]
+  }
+  

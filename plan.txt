@@ -1,0 +1,52 @@
+Constructor
+    -nazwa
+    -rok utworzenia
+    -kraj
+    -wygrane mistrzostwa konstruktorow
+    -kierowcy []
+Driver   
+    -imie
+    -nazwisko
+    -data urodzenia
+    -narodowosc
+    -aktualny zespol (Constructor)
+    -Poprzednie zespoly
+    -wygrane wyscigi
+    -ilosc pole position
+Race
+    -Circuit
+    -year
+    -winner
+    -kierowcy []
+Circuit
+    -nazwa
+    -kraj
+
+
+Constructor
+name
+year_founded
+country
+constructor_championship_wins
+drivers []
+
+Driver
+first_name
+last_name
+date_of_birth
+nationality
+current_team (Constructor)
+previous_teams
+race_wins
+pole_positions
+Race
+
+Circuit
+year
+winner
+drivers []
+Circuit
+
+name
+country
+
