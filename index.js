@@ -207,7 +207,17 @@ app.delete('/f1/driver/delete/:id', (req, res) => {
 });
 
 //TODO:
-//jakis bardziej skomplikowane url
+//2 layers
+    //GET /f1/constructors/:constructorId/races
+    //GET /f1/drivers/:driverId/races
+    //GET /f1/circuits/:circuitId/races
+    //GET /f1/driver/:driverId/race_wins
+    //Season
+    //GET /f1/races?year=2023
+//3 layers and more
+    //GET /f1/constructor/:constructorId/driver/:driver/races/:year - wszystkie wyscigi dla danego kierowcy z danego zespolu w danym roku (4)
+    //GET /f1/driver/:driverId/circuit/:circuit/races/:year - dany wyscig danego kierowcy w danym roku (3)
+    //GET /f1/constructor/:constructorId/championships/:year_from/:year_to - ile wygranych dany zespoł miał w latach od do (3)
 
 
 
