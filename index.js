@@ -1,6 +1,12 @@
 import express from  'express';
 import data from './data.json' assert { type: 'json' };
 import fs from 'fs';
+<<<<<<< HEAD
+import { ConstructorRouter} from "./Routes/ConstructorRouter.js";
+import {RaceRouter} from "./Routes/RaceRouter.js";
+import { DriverRouter } from "./Routes/DriverRouter.js";
+=======
+>>>>>>> ad5922dd53cdee412633e350732c073412bbba33
 
 const app = new express();
 app.use(express.json());
@@ -9,6 +15,19 @@ app.use(express.json());
 app.get('/f1', (req, res) => {
     res.send(data);
 });
+<<<<<<< HEAD
+
+app.use("/constructor", ConstructorRouter);
+app.use("/race", RaceRouter);
+app.use("/driver", DriverRouter);
+
+
+
+//GetAllCircuits
+app.get('/f1/circuit', (req, res) => {
+    res.send(data.Circuit)
+})
+=======
 // GetAllConstructors
 app.get('/f1/constructor', (req, res) => {
     res.send(data.Constructor);
@@ -113,6 +132,7 @@ app.delete('/f1/race/delete/:id', (req, res) => {
 app.get('/f1/circuit', (req, res) => {
     res.send(data.Circuit)
 })
+>>>>>>> ad5922dd53cdee412633e350732c073412bbba33
 //GetCircuitById
 app.get('/f1/circuit/:id', (req, res) => {
     const circuitId = parseInt(req.params.id);
@@ -156,6 +176,9 @@ app.delete('/f1/circuit/delete/:id', (req, res) => {
     }
 });
 
+<<<<<<< HEAD
+
+=======
 //GetAllDrivers
 app.get('/f1/driver', (req, res) => {
     res.send(data.Driver)
@@ -205,6 +228,7 @@ app.delete('/f1/driver/delete/:id', (req, res) => {
         res.status(404).send('Driver not found');
     }
 });
+>>>>>>> ad5922dd53cdee412633e350732c073412bbba33
 
 //TODO:
 //2 layers
@@ -221,6 +245,9 @@ app.delete('/f1/driver/delete/:id', (req, res) => {
 
 
 
+<<<<<<< HEAD
+
+=======
 const saveData = () => {
     fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
         if (err) {
@@ -230,6 +257,7 @@ const saveData = () => {
         }
     });
 };
+>>>>>>> ad5922dd53cdee412633e350732c073412bbba33
 
 
 
