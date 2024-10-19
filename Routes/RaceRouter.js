@@ -45,6 +45,19 @@ RaceRouter.put('/:id', (req, res) => {
         res.status(404).send('Race not found');
     }
 });
+
+RaceRouter.patch('/:id', (req, res) => {
+    const raceId = parseInt(req.params.id);
+    const index = data.Race.findIndex(r => r.id === raceId);
+    if (index !== -1) {
+        data.Race[index] = { ...data.Race[index], ...req.body };
+        saveData();
+        res.send(data.Race[index]);
+    } else {
+        res.status(404).send('Race not found');
+    }
+});
+
 //DeleteRace
 RaceRouter.delete('/:id', (req, res) => {
     const race = parseInt(req.params.id);

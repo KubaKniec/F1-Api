@@ -45,6 +45,17 @@ DriverRouter.put('/:id', (req, res) => {
         res.status(404).send('Driver not found');
     }
 });
+DriverRouter.patch('/:id', (req, res) => {
+    const driverId = parseInt(req.params.id);
+    const index = data.Driver.findIndex(d => d.id === driverId);
+    if (index !== -1) {
+        data.Driver[index] = {...data.Driver[index], ...req.body};
+        saveData();
+        res.send(data.Driver[index]);
+    } else {
+        res.status(404).send('Driver not found');
+    }
+});
 
 //DeleteDriver
 DriverRouter.delete('/:id', (req, res) => {

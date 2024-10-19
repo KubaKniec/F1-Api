@@ -55,7 +55,6 @@ ConstructorRouter.patch('/:id', (req, res) => {
     const index = data.Constructor.findIndex(c => c.id === constructorId);
 
     if (index !== -1) {
-        // Update only the fields that are provided in the request body
         data.Constructor[index] = { ...data.Constructor[index], ...req.body };
         saveData();
         res.send(data.Constructor[index]);

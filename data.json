@@ -69,16 +69,6 @@
       "year_founded": 2016,
       "country": "United States",
       "championship_wins": 0
-<<<<<<< HEAD
-    },
-    {
-      "id": 11,
-      "name": "Mega Koledzy 777",
-      "year_founded": 666,
-      "country": "DOJCZLAND",
-      "championship_wins": -1
-=======
->>>>>>> ad5922dd53cdee412633e350732c073412bbba33
     }
   ],
   "Race": [
@@ -89,11 +79,7 @@
         "name": "Monza",
         "country": "Italy"
       },
-<<<<<<< HEAD
-      "year": 2022,
-=======
       "year": 2023,
->>>>>>> ad5922dd53cdee412633e350732c073412bbba33
       "winner": {
         "id": 1,
         "first_name": "Max",
@@ -137,11 +123,7 @@
         "name": "Spa-Francorchamps",
         "country": "Belgium"
       },
-<<<<<<< HEAD
-      "year": 2021,
-=======
       "year": 2023,
->>>>>>> ad5922dd53cdee412633e350732c073412bbba33
       "winner": {
         "id": 1,
         "first_name": "Max",
@@ -296,6 +278,11 @@
       "id": 5,
       "name": "Circuit of the Americas",
       "country": "United States"
+    },
+    {
+      "id": 6,
+      "name": "Autodrom Poznanxxxxxx",
+      "country": "Pyry"
     }
   ]
 }
