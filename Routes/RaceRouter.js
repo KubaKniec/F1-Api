@@ -1,10 +1,10 @@
 import express from "express";
-import data from '../data.json' assert { type: 'json' };
+import data from '../data.json' assert {type: 'json'};
 import fs from 'fs';
+
 export const RaceRouter = express.Router();
 
 
-//GetAllRaces
 RaceRouter.get('/', (req, res) => {
     const yearFilter = req.query.year;
     let races = data.Race;
@@ -14,7 +14,7 @@ RaceRouter.get('/', (req, res) => {
     }
     res.send(races)
 })
-//GetRaceById
+
 RaceRouter.get('/:id', (req, res) => {
     const raceId = parseInt(req.params.id);
     const race = data.Race.find(c => c.id === raceId);
@@ -25,7 +25,6 @@ RaceRouter.get('/:id', (req, res) => {
     }
 });
 
-//AddRace
 RaceRouter.post('/', (req, res) => {
     const newRace = req.body;
     newRace.id = data.Race.length + 1;
@@ -33,12 +32,12 @@ RaceRouter.post('/', (req, res) => {
     saveData();
     res.status(201).send(newRace);
 });
-//UpdateRace
+
 RaceRouter.put('/:id', (req, res) => {
     const raceId = parseInt(req.params.id);
     const index = data.Race.findIndex(c => c.id === raceId);
     if (index !== -1) {
-        data.Race[index] = { ...data.Race[index], ...req.body };
+        data.Race[index] = {...data.Race[index], ...req.body};
         saveData();
         res.send(data.Race[index]);
     } else {
@@ -50,7 +49,7 @@ RaceRouter.patch('/:id', (req, res) => {
     const raceId = parseInt(req.params.id);
     const index = data.Race.findIndex(r => r.id === raceId);
     if (index !== -1) {
-        data.Race[index] = { ...data.Race[index], ...req.body };
+        data.Race[index] = {...data.Race[index], ...req.body};
         saveData();
         res.send(data.Race[index]);
     } else {
@@ -58,7 +57,7 @@ RaceRouter.patch('/:id', (req, res) => {
     }
 });
 
-//DeleteRace
+
 RaceRouter.delete('/:id', (req, res) => {
     const race = parseInt(req.params.id);
     const index = data.Race.findIndex(c => c.id === race);

@@ -1,5 +1,5 @@
 import express from "express";
-import data from '../data.json' assert { type: 'json' };
+import data from '../data.json' assert {type: 'json'};
 import fs from 'fs';
 
 export const CircuitRouter = express.Router();
@@ -25,6 +25,17 @@ CircuitRouter.get('/:id', (req, res) => {
     }
 });
 
+CircuitRouter.get('/:circuitId/races', (req, res) => {
+    const circuitId = parseInt(req.params.circuitId);
+    const racesForCircuit = data.Race.filter(race => race.Circuit.id === circuitId);
+
+    if (racesForCircuit.length > 0) {
+        res.send(racesForCircuit);
+    } else {
+        res.status(404).send('No races found for this circuit.');
+    }
+});
+
 CircuitRouter.post('/', (req, res) => {
     const newCircuit = req.body;
     newCircuit.id = data.Circuit.length + 1;
@@ -37,7 +48,7 @@ CircuitRouter.put('/:id', (req, res) => {
     const circuitId = parseInt(req.params.id);
     const index = data.Circuit.findIndex(c => c.id === circuitId);
     if (index !== -1) {
-        data.Circuit[index] = { ...data.Circuit[index], ...req.body };
+        data.Circuit[index] = {...data.Circuit[index], ...req.body};
         saveData();
         res.send(data.Circuit[index]);
     } else {
@@ -49,7 +60,7 @@ CircuitRouter.patch('/:id', (req, res) => {
     const circuitId = parseInt(req.params.id);
     const index = data.Circuit.findIndex(c => c.id === circuitId);
     if (index !== -1) {
-        data.Circuit[index] = { ...data.Circuit[index], ...req.body };
+        data.Circuit[index] = {...data.Circuit[index], ...req.body};
         saveData();
         res.send(data.Circuit[index]);
     } else {
