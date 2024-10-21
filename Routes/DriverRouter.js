@@ -38,7 +38,6 @@ DriverRouter.get('/:driverId/races', (req, res) => {
     }
 });
 
-
 DriverRouter.post('/', (req, res) => {
     const newDriver = req.body;
     newDriver.id = data.Driver.length + 1;

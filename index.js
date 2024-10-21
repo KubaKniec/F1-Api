@@ -8,21 +8,7 @@ import {CircuitRouter} from "./Routes/CircuitRouter.js";
 
 const app = new express();
 app.use(express.json());
-// const pathToSwaggerUi = require('swagger-ui-dist').absolutePath()
-//
-// app.use(express.static(pathToSwaggerUi))
-//
-// var SwaggerUIBundle = require('swagger-ui-dist').SwaggerUIBundle
-//
-// const ui = SwaggerUIBundle({
-//     url: "https://petstore.swagger.io/v2/swagger.json",
-//     dom_id: '#swagger-ui',
-//     presets: [
-//         SwaggerUIBundle.presets.apis,
-//         SwaggerUIBundle.SwaggerUIStandalonePreset
-//     ],
-//     layout: "StandaloneLayout"
-// })
+
 
 //GetAllData
 app.get('/f1', (req, res) => {

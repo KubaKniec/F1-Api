@@ -43,19 +43,17 @@ ConstructorRouter.get('/:constructorId/races', (req, res) => {
     }
 });
 
-//GET wwygrane wyscigi przez konkretnego kierowce z konkretenego zespolu
-ConstructorRouter.get('/:constructorId/drivers/:driverId/races', (req, res) => {
+//GET  wyscigi w ktorych bral udzial konkretney kierowca z konkretenego zespolu
+ConstructorRouter.get('/:constructorId/driver/:driverId/races', (req, res) => {
     const constructorId = parseInt(req.params.constructorId);
     const driverId = parseInt(req.params.driverId);
 
-    // Find the constructor name by ID
     const constructor = data.Constructor.find(c => c.id === constructorId);
 
     if (!constructor) {
         return res.status(404).send('Constructor not found');
     }
 
-    // Filter races where the driver participated and represented the constructor's team
     const racesForDriverInConstructor = data.Race.filter(race =>
         race.winner.id === driverId && race.winner.current_team === constructor.name
     );
@@ -66,6 +64,33 @@ ConstructorRouter.get('/:constructorId/drivers/:driverId/races', (req, res) => {
         res.status(404).send('No races found for this driver in this constructor.');
     }
 });
+
+ConstructorRouter.get('/:constructorId/race/:raceId/winner', (req, res) => {
+    const constructorId = parseInt(req.params.constructorId);
+    const raceId = parseInt(req.params.raceId);
+
+    // Find the constructor by ID
+    const constructor = data.Constructor.find(c => c.id === constructorId);
+
+    if (!constructor) {
+        return res.status(404).send('Constructor not found');
+    }
+
+    // Find the race by ID
+    const race = data.Race.find(r => r.id === raceId);
+
+    if (!race) {
+        return res.status(404).send('Race not found');
+    }
+
+    // Check if the constructor's team participated in the race
+    if (race.winner.current_team === constructor.name) {
+        res.send(race.winner);
+    } else {
+        res.status(404).send('No winner found for this constructor in this race.');
+    }
+});
+
 
 
 ConstructorRouter.post('/', (req, res) => {
