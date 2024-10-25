@@ -43,30 +43,6 @@ ConstructorRouter.get('/:constructorId/races', (req, res) => {
     }
 });
 
-//GET wwygrane wyscigi przez konkretnego kierowce z konkretenego zespolu
-ConstructorRouter.get('/:constructorId/drivers/:driverId/races', (req, res) => {
-    const constructorId = parseInt(req.params.constructorId);
-    const driverId = parseInt(req.params.driverId);
-
-    // Find the constructor name by ID
-    const constructor = data.Constructor.find(c => c.id === constructorId);
-
-    if (!constructor) {
-        return res.status(404).send('Constructor not found');
-    }
-
-    // Filter races where the driver participated and represented the constructor's team
-    const racesForDriverInConstructor = data.Race.filter(race =>
-        race.winner.id === driverId && race.winner.current_team === constructor.name
-    );
-
-    if (racesForDriverInConstructor.length > 0) {
-        res.send(racesForDriverInConstructor);
-    } else {
-        res.status(404).send('No races found for this driver in this constructor.');
-    }
-});
-
 
 ConstructorRouter.post('/', (req, res) => {
     const newConstructor = req.body;

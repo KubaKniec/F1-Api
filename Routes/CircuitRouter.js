@@ -11,8 +11,12 @@ CircuitRouter.get('/', (req, res) => {
     if (nameFilter) {
         circuit = circuit.filter(c => c.name.toLowerCase().includes(nameFilter.toLowerCase()));
     }
+    if (circuit >= 1){
+        res.status(200).send(circuit);
+    } else {
+        res.status(404).send("");
+    }
 
-    res.send(circuit);
 })
 
 CircuitRouter.get('/:id', (req, res) => {
