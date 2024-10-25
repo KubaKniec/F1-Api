@@ -8,20 +8,6 @@ import {CircuitRouter} from "./Routes/CircuitRouter.js";
 
 const app = new express();
 app.use(express.json());
-
-const middlewareContentType = (req, res, next) => {
-    const ct = req.get('Content-Type');
-    if (ct !== 'application/json'){
-        return res.status(400).send("Wrong Content-Type");
-    }
-    next();
-}
-
-const middlewareResourceNotFound = (req, res, next) => {
-    res.status(404).send('Resource not found');
-    next();
-};
-
 // const pathToSwaggerUi = require('swagger-ui-dist').absolutePath()
 //
 // app.use(express.static(pathToSwaggerUi))
@@ -38,8 +24,6 @@ const middlewareResourceNotFound = (req, res, next) => {
 //     layout: "StandaloneLayout"
 // })
 
-
-app.use(middlewareContentType);
 //GetAllData
 app.get('/f1', (req, res) => {
     res.send(data);
@@ -50,7 +34,6 @@ app.use("/race", RaceRouter);
 app.use("/driver", DriverRouter);
 app.use("/circuit", CircuitRouter);
 
-app.use(middlewareResourceNotFound)
 
 app.listen(8989, () => {
     console.log("Started on 8989")

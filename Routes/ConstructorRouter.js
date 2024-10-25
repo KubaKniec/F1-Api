@@ -44,13 +44,6 @@ ConstructorRouter.get('/:constructorId/races', (req, res) => {
 });
 
 
-ConstructorRouter.post('/', (req, res) => {
-    const newConstructor = req.body;
-    newConstructor.id = data.Constructor.length + 1;
-    data.Constructor.push(newConstructor);
-    saveData();
-    res.status(201).send(newConstructor);
-});
 
 ConstructorRouter.put('/:id', (req, res) => {
     const constructorId = parseInt(req.params.id);
