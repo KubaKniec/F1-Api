@@ -7,16 +7,8 @@
       "country": "Austria",
       "championship_wins": 5,
       "drivers": [
-        {
-          "id": 1,
-          "first_name": "Max",
-          "last_name": "Verstappen"
-        },
-        {
-          "id": 2,
-          "first_name": "Sergio",
-          "last_name": "Perez"
-        }
+        1,
+        2
       ]
     },
     {
@@ -26,16 +18,8 @@
       "country": "Germany",
       "championship_wins": 8,
       "drivers": [
-        {
-          "id": 3,
-          "first_name": "Lewis",
-          "last_name": "Hamilton"
-        },
-        {
-          "id": 4,
-          "first_name": "George",
-          "last_name": "Russell"
-        }
+        3,
+        4
       ]
     },
     {
@@ -45,16 +29,8 @@
       "country": "Italy",
       "championship_wins": 16,
       "drivers": [
-        {
-          "id": 5,
-          "first_name": "Charles",
-          "last_name": "Leclerc"
-        },
-        {
-          "id": 6,
-          "first_name": "Carlos",
-          "last_name": "Sainz"
-        }
+        5,
+        6
       ]
     },
     {
@@ -64,16 +40,8 @@
       "country": "United Kingdom",
       "championship_wins": 8,
       "drivers": [
-        {
-          "id": 7,
-          "first_name": "Lando",
-          "last_name": "Norris"
-        },
-        {
-          "id": 8,
-          "first_name": "Oscar",
-          "last_name": "Piastri"
-        }
+        7,
+        8
       ]
     },
     {
@@ -83,16 +51,8 @@
       "country": "United Kingdom",
       "championship_wins": 0,
       "drivers": [
-        {
-          "id": 9,
-          "first_name": "Fernando",
-          "last_name": "Alonso"
-        },
-        {
-          "id": 10,
-          "first_name": "Lance",
-          "last_name": "Stroll"
-        }
+        9,
+        10
       ]
     },
     {
@@ -102,16 +62,8 @@
       "country": "France",
       "championship_wins": 0,
       "drivers": [
-        {
-          "id": 11,
-          "first_name": "Esteban",
-          "last_name": "Ocon"
-        },
-        {
-          "id": 12,
-          "first_name": "Pierre",
-          "last_name": "Gasly"
-        }
+        11,
+        12
       ]
     },
     {
@@ -121,16 +73,8 @@
       "country": "Italy",
       "championship_wins": 0,
       "drivers": [
-        {
-          "id": 13,
-          "first_name": "Yuki",
-          "last_name": "Tsunoda"
-        },
-        {
-          "id": 14,
-          "first_name": "Daniel",
-          "last_name": "Ricciardo"
-        }
+        13,
+        14
       ]
     },
     {
@@ -140,16 +84,8 @@
       "country": "United Kingdom",
       "championship_wins": 9,
       "drivers": [
-        {
-          "id": 15,
-          "first_name": "Alexander",
-          "last_name": "Albon"
-        },
-        {
-          "id": 16,
-          "first_name": "Logan",
-          "last_name": "Sargeant"
-        }
+        15,
+        16
       ]
     },
     {
@@ -159,16 +95,8 @@
       "country": "Switzerland",
       "championship_wins": 2,
       "drivers": [
-        {
-          "id": 17,
-          "first_name": "Valtteri",
-          "last_name": "Bottas"
-        },
-        {
-          "id": 18,
-          "first_name": "Zhou",
-          "last_name": "Guanyu"
-        }
+        17,
+        18
       ]
     },
     {
@@ -178,16 +106,8 @@
       "country": "United States",
       "championship_wins": 0,
       "drivers": [
-        {
-          "id": 19,
-          "first_name": "Kevin",
-          "last_name": "Magnussen"
-        },
-        {
-          "id": 20,
-          "first_name": "Nico",
-          "last_name": "Hülkenberg"
-        }
+        19,
+        20
       ]
     },
     {
@@ -250,492 +170,83 @@
   "Race": [
     {
       "id": 1,
-      "Circuit": {
-        "id": 1,
-        "name": "Monza",
-        "country": "Italy"
-      },
+      "Circuit": 1,
       "year": 2023,
-      "winner": {
-        "id": 1,
-        "first_name": "Max",
-        "last_name": "Verstappen",
-        "date_of_birth": "1997-09-30",
-        "nationality": "Dutch",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          2
-        ],
-        "race_wins": 71,
-        "pole_positions": 28
-      },
-      "second_place": {
-        "id": 4,
-        "first_name": "Sergio",
-        "last_name": "Perez",
-        "date_of_birth": "1990-01-26",
-        "nationality": "Mexican",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Racing Point",
-          "Force India"
-        ],
-        "race_wins": 7,
-        "pole_positions": 3
-      },
-      "third_place": {
-        "id": 5,
-        "first_name": "Fernando",
-        "last_name": "Alonso",
-        "date_of_birth": "1981-07-29",
-        "nationality": "Spanish",
-        "current_team": "Aston Martin F1 Team",
-        "previous_teams": [
-          "Alpine",
-          "Ferrari"
-        ],
-        "race_wins": 32,
-        "pole_positions": 22
-      }
+      "winner": 1,
+      "second_place": 4,
+      "third_place": 5
     },
     {
       "id": 2,
-      "Circuit": {
-        "id": 2,
-        "name": "Silverstone",
-        "country": "United Kingdom"
-      },
+      "Circuit": 2,
       "year": 2023,
-      "winner": {
-        "id": 2,
-        "first_name": "Lewis",
-        "last_name": "Hamilton",
-        "date_of_birth": "1985-01-07",
-        "nationality": "British",
-        "current_team": "Mercedes-AMG Petronas",
-        "previous_teams": [
-          "McLaren"
-        ],
-        "race_wins": 103,
-        "pole_positions": 104
-      },
-      "second_place": {
-        "id": 1,
-        "first_name": "Max",
-        "last_name": "Verstappen",
-        "date_of_birth": "1997-09-30",
-        "nationality": "Dutch",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Toro Rosso"
-        ],
-        "race_wins": 71,
-        "pole_positions": 28
-      },
-      "third_place": {
-        "id": 3,
-        "first_name": "Charles",
-        "last_name": "Leclerc",
-        "date_of_birth": "1997-10-16",
-        "nationality": "Monégasque",
-        "current_team": "Scuderia Ferrari",
-        "previous_teams": [
-          "Sauber"
-        ],
-        "race_wins": 5,
-        "pole_positions": 18
-      }
+      "winner": 2,
+      "second_place": 1,
+      "third_place": 3
     },
     {
       "id": 3,
-      "Circuit": {
-        "id": 3,
-        "name": "Spa-Francorchamps",
-        "country": "Belgium"
-      },
+      "Circuit": 3,
       "year": 2023,
-      "winner": {
-        "id": 1,
-        "first_name": "Max",
-        "last_name": "Verstappen",
-        "date_of_birth": "1997-09-30",
-        "nationality": "Dutch",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Toro Rosso"
-        ],
-        "race_wins": 71,
-        "pole_positions": 28
-      },
-      "second_place": {
-        "id": 4,
-        "first_name": "Sergio",
-        "last_name": "Perez",
-        "date_of_birth": "1990-01-26",
-        "nationality": "Mexican",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Racing Point",
-          "Force India"
-        ],
-        "race_wins": 7,
-        "pole_positions": 3
-      },
-      "third_place": {
-        "id": 5,
-        "first_name": "Fernando",
-        "last_name": "Alonso",
-        "date_of_birth": "1981-07-29",
-        "nationality": "Spanish",
-        "current_team": "Aston Martin F1 Team",
-        "previous_teams": [
-          "Alpine",
-          "Ferrari"
-        ],
-        "race_wins": 32,
-        "pole_positions": 22
-      }
+      "winner": 1,
+      "second_place": 4,
+      "third_place": 5
     },
     {
       "id": 4,
-      "Circuit": {
-        "id": 4,
-        "name": "Suzuka",
-        "country": "Japan"
-      },
+      "Circuit": 4,
       "year": 2023,
-      "winner": {
-        "id": 3,
-        "first_name": "Charles",
-        "last_name": "Leclerc",
-        "date_of_birth": "1997-10-16",
-        "nationality": "Monégasque",
-        "current_team": "Scuderia Ferrari",
-        "previous_teams": [
-          "Sauber"
-        ],
-        "race_wins": 5,
-        "pole_positions": 18
-      },
-      "second_place": {
-        "id": 1,
-        "first_name": "Max",
-        "last_name": "Verstappen",
-        "date_of_birth": "1997-09-30",
-        "nationality": "Dutch",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Toro Rosso"
-        ],
-        "race_wins": 71,
-        "pole_positions": 28
-      },
-      "third_place": {
-        "id": 2,
-        "first_name": "Lewis",
-        "last_name": "Hamilton",
-        "date_of_birth": "1985-01-07",
-        "nationality": "British",
-        "current_team": "Mercedes-AMG Petronas",
-        "previous_teams": [
-          "McLaren"
-        ],
-        "race_wins": 103,
-        "pole_positions": 104
-      }
+      "winner": 3,
+      "second_place": 1,
+      "third_place": 2
     },
     {
       "id": 5,
-      "Circuit": {
-        "id": 5,
-        "name": "Circuit of the Americas",
-        "country": "United States"
-      },
+      "Circuit": 5,
       "year": 2023,
-      "winner": {
-        "id": 4,
-        "first_name": "Sergio",
-        "last_name": "Perez",
-        "date_of_birth": "1990-01-26",
-        "nationality": "Mexican",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Racing Point",
-          "Force India"
-        ],
-        "race_wins": 7,
-        "pole_positions": 3
-      },
-      "second_place": {
-        "id": 1,
-        "first_name": "Max",
-        "last_name": "Verstappen",
-        "date_of_birth": "1997-09-30",
-        "nationality": "Dutch",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Toro Rosso"
-        ],
-        "race_wins": 71,
-        "pole_positions": 28
-      },
-      "third_place": {
-        "id": 2,
-        "first_name": "Lewis",
-        "last_name": "Hamilton",
-        "date_of_birth": "1985-01-07",
-        "nationality": "British",
-        "current_team": "Mercedes-AMG Petronas",
-        "previous_teams": [
-          "McLaren"
-        ],
-        "race_wins": 103,
-        "pole_positions": 104
-      }
+      "winner": 4,
+      "second_place": 1,
+      "third_place": 2
     },
     {
       "id": 6,
-      "Circuit": {
-        "id": 6,
-        "name": "Monaco",
-        "country": "Monaco"
-      },
+      "Circuit": 6,
       "year": 2023,
-      "winner": {
-        "id": 1,
-        "first_name": "Max",
-        "last_name": "Verstappen",
-        "date_of_birth": "1997-09-30",
-        "nationality": "Dutch",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Toro Rosso"
-        ],
-        "race_wins": 71,
-        "pole_positions": 28
-      },
-      "second_place": {
-        "id": 3,
-        "first_name": "Charles",
-        "last_name": "Leclerc",
-        "date_of_birth": "1997-10-16",
-        "nationality": "Monégasque",
-        "current_team": "Scuderia Ferrari",
-        "previous_teams": [
-          "Sauber"
-        ],
-        "race_wins": 5,
-        "pole_positions": 18
-      },
-      "third_place": {
-        "id": 5,
-        "first_name": "Fernando",
-        "last_name": "Alonso",
-        "date_of_birth": "1981-07-29",
-        "nationality": "Spanish",
-        "current_team": "Aston Martin F1 Team",
-        "previous_teams": [
-          "Alpine",
-          "Ferrari"
-        ],
-        "race_wins": 32,
-        "pole_positions": 22
-      }
+      "winner": 1,
+      "second_place": 3,
+      "third_place": 5
     },
     {
       "id": 7,
-      "Circuit": {
-        "id": 7,
-        "name": "Imola",
-        "country": "Italy"
-      },
+      "Circuit": 7,
       "year": 2023,
-      "winner": {
-        "id": 1,
-        "first_name": "Max",
-        "last_name": "Verstappen",
-        "date_of_birth": "1997-09-30",
-        "nationality": "Dutch",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Toro Rosso"
-        ],
-        "race_wins": 71,
-        "pole_positions": 28
-      },
-      "second_place": {
-        "id": 2,
-        "first_name": "Lewis",
-        "last_name": "Hamilton",
-        "date_of_birth": "1985-01-07",
-        "nationality": "British",
-        "current_team": "Mercedes-AMG Petronas",
-        "previous_teams": [
-          "McLaren"
-        ],
-        "race_wins": 103,
-        "pole_positions": 104
-      },
-      "third_place": {
-        "id": 4,
-        "first_name": "Sergio",
-        "last_name": "Perez",
-        "date_of_birth": "1990-01-26",
-        "nationality": "Mexican",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Racing Point",
-          "Force India"
-        ],
-        "race_wins": 7,
-        "pole_positions": 3
-      }
+      "winner": 1,
+      "second_place": 2,
+      "third_place": 4
     },
     {
       "id": 8,
-      "Circuit": {
-        "id": 8,
-        "name": "Hungaroring",
-        "country": "Hungary"
-      },
+      "Circuit": 8,
       "year": 2023,
-      "winner": {
-        "id": 2,
-        "first_name": "Lewis",
-        "last_name": "Hamilton",
-        "date_of_birth": "1985-01-07",
-        "nationality": "British",
-        "current_team": "Mercedes-AMG Petronas",
-        "previous_teams": [
-          "McLaren"
-        ],
-        "race_wins": 103,
-        "pole_positions": 104
-      },
-      "second_place": {
-        "id": 1,
-        "first_name": "Max",
-        "last_name": "Verstappen",
-        "date_of_birth": "1997-09-30",
-        "nationality": "Dutch",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Toro Rosso"
-        ],
-        "race_wins": 71,
-        "pole_positions": 28
-      },
-      "third_place": {
-        "id": 4,
-        "first_name": "Sergio",
-        "last_name": "Perez",
-        "date_of_birth": "1990-01-26",
-        "nationality": "Mexican",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Racing Point",
-          "Force India"
-        ],
-        "race_wins": 7,
-        "pole_positions": 3
-      }
+      "winner": 2,
+      "second_place": 1,
+      "third_place": 4
     },
     {
       "id": 9,
-      "Circuit": {
-        "id": 9,
-        "name": "Bahrain International Circuit",
-        "country": "Bahrain"
-      },
+      "Circuit": 9,
       "year": 2023,
-      "winner": {
-        "id": 1,
-        "first_name": "Max",
-        "last_name": "Verstappen",
-        "date_of_birth": "1997-09-30",
-        "nationality": "Dutch",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Toro Rosso"
-        ],
-        "race_wins": 71,
-        "pole_positions": 28
-      },
-      "second_place": {
-        "id": 4,
-        "first_name": "Sergio",
-        "last_name": "Perez",
-        "date_of_birth": "1990-01-26",
-        "nationality": "Mexican",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Racing Point",
-          "Force India"
-        ],
-        "race_wins": 7,
-        "pole_positions": 3
-      },
-      "third_place": {
-        "id": 3,
-        "first_name": "Charles",
-        "last_name": "Leclerc",
-        "date_of_birth": "1997-10-16",
-        "nationality": "Monégasque",
-        "current_team": "Scuderia Ferrari",
-        "previous_teams": [
-          "Sauber"
-        ],
-        "race_wins": 5,
-        "pole_positions": 18
-      }
+      "winner": 1,
+      "second_place": 4,
+      "third_place": 3
     },
     {
       "id": 10,
-      "Circuit": {
-        "id": 10,
-        "name": "Interlagos",
-        "country": "Brazil"
-      },
+      "Circuit": 10,
       "year": 2023,
-      "winner": {
-        "id": 6,
-        "first_name": "George",
-        "last_name": "Russell",
-        "date_of_birth": "1998-02-15",
-        "nationality": "British",
-        "current_team": "Mercedes-AMG Petronas",
-        "previous_teams": [
-          "Williams"
-        ],
-        "race_wins": 1,
-        "pole_positions": 2
-      },
-      "second_place": {
-        "id": 2,
-        "first_name": "Lewis",
-        "last_name": "Hamilton",
-        "date_of_birth": "1985-01-07",
-        "nationality": "British",
-        "current_team": "Mercedes-AMG Petronas",
-        "previous_teams": [
-          "McLaren"
-        ],
-        "race_wins": 103,
-        "pole_positions": 104
-      },
-      "third_place": {
-        "id": 1,
-        "first_name": "Max",
-        "last_name": "Verstappen",
-        "date_of_birth": "1997-09-30",
-        "nationality": "Dutch",
-        "current_team": "Red Bull Racing",
-        "previous_teams": [
-          "Toro Rosso"
-        ],
-        "race_wins": 71,
-        "pole_positions": 28
-      }
+      "winner": 6,
+      "second_place": 2,
+      "third_place": 1
     }
   ],
   "Driver": [
@@ -747,7 +258,7 @@
       "nationality": "Dutch",
       "current_team": "Red Bull Racing",
       "previous_teams": [
-        "Toro Rosso"
+        12
       ],
       "race_wins": 71,
       "pole_positions": 30
@@ -759,9 +270,7 @@
       "date_of_birth": "1985-01-07",
       "nationality": "British",
       "current_team": "Mercedes-AMG Petronas",
-      "previous_teams": [
-        "McLaren"
-      ],
+      "previous_teams": [],
       "race_wins": 103,
       "pole_positions": 104
     },
@@ -770,10 +279,10 @@
       "first_name": "Charles",
       "last_name": "Leclerc",
       "date_of_birth": "1997-10-16",
-      "nationality": "Monégasque",
+      "nationality": "Monque",
       "current_team": "Scuderia Ferrari",
       "previous_teams": [
-        "Sauber"
+        11
       ],
       "race_wins": 5,
       "pole_positions": 20
@@ -786,10 +295,9 @@
       "nationality": "Mexican",
       "current_team": "Red Bull Racing",
       "previous_teams": [
-        "Racing Point",
-        "Force India",
-        "Sauber",
-        "McLaren"
+        14,
+        13,
+        11
       ],
       "race_wins": 6,
       "pole_positions": 1
@@ -802,11 +310,8 @@
       "nationality": "Spanish",
       "current_team": "Aston Martin F1 Team",
       "previous_teams": [
-        "Alpine",
-        "McLaren",
-        "Ferrari",
-        "Renault",
-        "Minardi"
+        16,
+        15
       ],
       "race_wins": 32,
       "pole_positions": 22
@@ -818,9 +323,7 @@
       "date_of_birth": "1998-02-15",
       "nationality": "British",
       "current_team": "Mercedes-AMG Petronas",
-      "previous_teams": [
-        "Williams"
-      ],
+      "previous_teams": [],
       "race_wins": 1,
       "pole_positions": 2
     },
@@ -832,9 +335,8 @@
       "nationality": "Spanish",
       "current_team": "Scuderia Ferrari",
       "previous_teams": [
-        "Toro Rosso",
-        "Renault",
-        "McLaren"
+        12,
+        16
       ],
       "race_wins": 1,
       "pole_positions": 1
@@ -869,9 +371,8 @@
       "nationality": "French",
       "current_team": "Alpine F1 Team",
       "previous_teams": [
-        "Manor",
-        "Force India",
-        "Racing Point"
+        13,
+        14
       ],
       "race_wins": 1,
       "pole_positions": 0
@@ -884,8 +385,8 @@
       "nationality": "French",
       "current_team": "Alpine F1 Team",
       "previous_teams": [
-        "Toro Rosso",
-        "Red Bull Racing"
+        12,
+        1
       ],
       "race_wins": 1,
       "pole_positions": 0
@@ -909,11 +410,10 @@
       "nationality": "Australian",
       "current_team": "AlphaTauri",
       "previous_teams": [
-        "HRT",
-        "Toro Rosso",
-        "Red Bull Racing",
-        "Renault",
-        "McLaren"
+        17,
+        12,
+        1,
+        16
       ],
       "race_wins": 8,
       "pole_positions": 3
@@ -926,8 +426,7 @@
       "nationality": "Danish",
       "current_team": "Haas F1 Team",
       "previous_teams": [
-        "McLaren",
-        "Renault"
+        16
       ],
       "race_wins": 0,
       "pole_positions": 1
@@ -935,14 +434,13 @@
     {
       "id": 15,
       "first_name": "Nico",
-      "last_name": "Hülkenberg",
+      "last_name": "Hulkenberg",
       "date_of_birth": "1987-08-19",
       "nationality": "German",
       "current_team": "Haas F1 Team",
       "previous_teams": [
-        "Williams",
-        "Force India",
-        "Renault"
+        13,
+        16
       ],
       "race_wins": 0,
       "pole_positions": 1
@@ -955,8 +453,7 @@
       "nationality": "Finnish",
       "current_team": "Alfa Romeo Racing",
       "previous_teams": [
-        "Williams",
-        "Mercedes-AMG Petronas"
+        2
       ],
       "race_wins": 10,
       "pole_positions": 20
@@ -980,8 +477,8 @@
       "nationality": "Thai",
       "current_team": "Williams Racing",
       "previous_teams": [
-        "Toro Rosso",
-        "Red Bull Racing"
+        12,
+        1
       ],
       "race_wins": 0,
       "pole_positions": 0
@@ -1010,55 +507,55 @@
     }
   ],
   "Circuit": [
-      {
-        "id": 1,
-        "name": "Monza",
-        "country": "Italy"
-      },
-      {
-        "id": 2,
-        "name": "Silverstone",
-        "country": "United Kingdom"
-      },
-      {
-        "id": 3,
-        "name": "Spa-Francorchamps",
-        "country": "Belgium"
-      },
-      {
-        "id": 4,
-        "name": "Suzuka",
-        "country": "Japan"
-      },
-      {
-        "id": 5,
-        "name": "Circuit of the Americas",
-        "country": "United States"
-      },
-      {
-        "id": 6,
-        "name": "Monaco",
-        "country": "Monaco"
-      },
-      {
-        "id": 7,
-        "name": "Imola",
-        "country": "Italy"
-      },
-      {
-        "id": 8,
-        "name": "Hungaroring",
-        "country": "Hungary"
-      },
-      {
-        "id": 9,
-        "name": "Bahrain International Circuit",
-        "country": "Bahrain"
-      },
-      {
-        "id": 10,
-        "name": "Interlagos",
-        "country": "Brazil"
-      }
-    ]
+    {
+      "id": 1,
+      "name": "Monza",
+      "country": "Italy"
+    },
+    {
+      "id": 2,
+      "name": "Silverstone",
+      "country": "United Kingdom"
+    },
+    {
+      "id": 3,
+      "name": "Spa-Francorchamps",
+      "country": "Belgium"
+    },
+    {
+      "id": 4,
+      "name": "Suzuka",
+      "country": "Japan"
+    },
+    {
+      "id": 5,
+      "name": "Circuit of the Americas",
+      "country": "United States"
+    },
+    {
+      "id": 6,
+      "name": "Monaco",
+      "country": "Monaco"
+    },
+    {
+      "id": 7,
+      "name": "Imola",
+      "country": "Italy"
+    },
+    {
+      "id": 8,
+      "name": "Hungaroring",
+      "country": "Hungary"
+    },
+    {
+      "id": 9,
+      "name": "Bahrain International Circuit",
+      "country": "Bahrain"
+    },
+    {
+      "id": 10,
+      "name": "Interlagos",
+      "country": "Brazil"
+    }
+  ]
 }

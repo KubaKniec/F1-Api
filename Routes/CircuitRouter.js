@@ -1,8 +1,11 @@
 import express from "express";
-import data from '../data.json' assert {type: 'json'};
-import fs from 'fs';
+import data from '../data.json' assert { type: 'json' };
+import { responseHandler, errorHandler } from "../handlers/ResponseHandler.js";
+import { saveData } from  "../handlers/DataSaver.js";
 
 export const CircuitRouter = express.Router();
+
+CircuitRouter.use(responseHandler);
 
 CircuitRouter.get('/', (req, res) => {
     const nameFilter = req.query.name;
@@ -11,21 +14,30 @@ CircuitRouter.get('/', (req, res) => {
     if (nameFilter) {
         circuit = circuit.filter(c => c.name.toLowerCase().includes(nameFilter.toLowerCase()));
     }
-    if (circuit >= 1){
-        res.status(200).send(circuit);
+
+    if (circuit.length >= 1) {
+        res.success(circuit);
     } else {
-        res.status(404).send("");
+        res.notFound("No circuits found");
     }
+});
 
-})
+CircuitRouter.get('/:circuitId/races', (req, res) => {
+    const circuitId = parseInt(req.params.circuitId);
+    const racesForCircuit = data.Race.filter(race => race.Circuit === circuitId);
 
-CircuitRouter.get('/:id', (req, res) => {
-    const circuitId = parseInt(req.params.id);
-    const circuit = data.Circuit.find(c => c.id === circuitId);
-    if (circuit) {
-        res.send(circuit);
+    const detailedRaces = racesForCircuit.map(race => ({
+        ...race,
+        winner: data.Driver.find(d => d.id === race.winner),
+        second_place: data.Driver.find(d => d.id === race.second_place),
+        third_place: data.Driver.find(d => d.id === race.third_place),
+        Circuit: data.Circuit.find(c => c.id === race.Circuit)
+    }));
+
+    if (detailedRaces.length > 0) {
+        res.success(detailedRaces);
     } else {
-        res.status(404).send('Circuit not found');
+        res.notFound("No races found for this circuit");
     }
 });
 
@@ -34,9 +46,9 @@ CircuitRouter.get('/:circuitId/races', (req, res) => {
     const racesForCircuit = data.Race.filter(race => race.Circuit.id === circuitId);
 
     if (racesForCircuit.length > 0) {
-        res.send(racesForCircuit);
+        res.success(racesForCircuit);
     } else {
-        res.status(404).send('No races found for this circuit.');
+        res.notFound("No races found for this circuit");
     }
 });
 
@@ -45,52 +57,47 @@ CircuitRouter.post('/', (req, res) => {
     newCircuit.id = data.Circuit.length + 1;
     data.Circuit.push(newCircuit);
     saveData();
+
     res.status(201).send(newCircuit);
 });
 
 CircuitRouter.put('/:id', (req, res) => {
     const circuitId = parseInt(req.params.id);
     const index = data.Circuit.findIndex(c => c.id === circuitId);
+
     if (index !== -1) {
-        data.Circuit[index] = {...data.Circuit[index], ...req.body};
+        data.Circuit[index] = { ...data.Circuit[index], ...req.body };
         saveData();
-        res.send(data.Circuit[index]);
+        res.success(data.Circuit[index]);
     } else {
-        res.status(404).send('Circuit not found');
+        res.notFound("Circuit not found");
     }
 });
 
 CircuitRouter.patch('/:id', (req, res) => {
     const circuitId = parseInt(req.params.id);
     const index = data.Circuit.findIndex(c => c.id === circuitId);
+
     if (index !== -1) {
-        data.Circuit[index] = {...data.Circuit[index], ...req.body};
+        data.Circuit[index] = { ...data.Circuit[index], ...req.body };
         saveData();
-        res.send(data.Circuit[index]);
+        res.success(data.Circuit[index]);
     } else {
-        res.status(404).send('Circuit not found');
+        res.notFound("Circuit not found");
     }
 });
-
 
 CircuitRouter.delete('/:id', (req, res) => {
-    const circuit = parseInt(req.params.id);
-    const index = data.Circuit.findIndex(c => c.id === circuit);
+    const circuitId = parseInt(req.params.id);
+    const index = data.Circuit.findIndex(c => c.id === circuitId);
+
     if (index !== -1) {
-        const deleteCircuit = data.Circuit.splice(index, 1);
+        const deletedCircuit = data.Circuit.splice(index, 1);
         saveData();
-        res.send(deleteCircuit);
+        res.success(deletedCircuit);
     } else {
-        res.status(404).send('Circuit not found');
+        res.notFound("Circuit not found");
     }
 });
 
-const saveData = () => {
-    fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
-        if (err) {
-            console.error('Error saving data:', err);
-        } else {
-            console.log('Data saved successfully.');
-        }
-    });
-};
+CircuitRouter.use(errorHandler);
