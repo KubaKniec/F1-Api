@@ -41,16 +41,16 @@ CircuitRouter.get('/:circuitId/races', (req, res) => {
     }
 });
 
-CircuitRouter.get('/:circuitId/races', (req, res) => {
-    const circuitId = parseInt(req.params.circuitId);
-    const racesForCircuit = data.Race.filter(race => race.Circuit.id === circuitId);
-
-    if (racesForCircuit.length > 0) {
-        res.success(racesForCircuit);
-    } else {
-        res.notFound("No races found for this circuit");
-    }
-});
+// CircuitRouter.get('/:circuitId/races', (req, res) => {
+//     const circuitId = parseInt(req.params.circuitId);
+//     const racesForCircuit = data.Race.filter(race => race.Circuit.id === circuitId);
+//
+//     if (racesForCircuit.length > 0) {
+//         res.success(racesForCircuit);
+//     } else {
+//         res.notFound("No races found for this circuit");
+//     }
+// });
 
 CircuitRouter.post('/', (req, res) => {
     const newCircuit = req.body;

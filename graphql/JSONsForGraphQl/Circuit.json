@@ -1,0 +1,54 @@
+{
+  "Circuit": [
+    {
+      "id": 1,
+      "name": "Monza",
+      "country": "Italy"
+    },
+    {
+      "id": 2,
+      "name": "Silverstone",
+      "country": "United Kingdom"
+    },
+    {
+      "id": 3,
+      "name": "Spa-Francorchamps",
+      "country": "Belgium"
+    },
+    {
+      "id": 4,
+      "name": "Suzuka",
+      "country": "Japan"
+    },
+    {
+      "id": 5,
+      "name": "Circuit of the Americas",
+      "country": "United States"
+    },
+    {
+      "id": 6,
+      "name": "Monaco",
+      "country": "Monaco"
+    },
+    {
+      "id": 7,
+      "name": "Imola",
+      "country": "Italy"
+    },
+    {
+      "id": 8,
+      "name": "Hungaroring",
+      "country": "Hungary"
+    },
+    {
+      "id": 9,
+      "name": "Bahrain International Circuit",
+      "country": "Bahrain"
+    },
+    {
+      "id": 10,
+      "name": "Interlagos",
+      "country": "Brazil"
+    }
+  ]
+}

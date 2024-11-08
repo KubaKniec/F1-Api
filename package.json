@@ -11,7 +11,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@apollo/server": "^4.11.2",
+    "cors": "^2.8.5",
     "express": "^4.21.1",
+    "graphql": "^16.9.0",
+    "graphql-http": "^1.22.2",
     "nodemon": "^3.1.7",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-dist": "^5.17.14",

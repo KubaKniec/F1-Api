@@ -1,0 +1,19 @@
+type Circuit {
+    id: Int
+    name: String
+    country: String
+}
+
+type Race {
+    id: Int
+    Circuit: Int
+    year: Int
+    winner: Int
+    second_place: Int
+    third_place: Int
+}
+
+type Query {
+    circuits: [Circuit],
+    race: [Race]
+}

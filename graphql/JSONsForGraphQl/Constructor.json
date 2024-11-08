@@ -1,0 +1,170 @@
+{
+  "Constructor": [
+    {
+      "id": 1,
+      "name": "Red Bull Racing",
+      "year_founded": 2005,
+      "country": "Austria",
+      "championship_wins": 5,
+      "drivers": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Mercedes-AMG Petronas",
+      "year_founded": 1954,
+      "country": "Germany",
+      "championship_wins": 8,
+      "drivers": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Scuderia Ferrari",
+      "year_founded": 1929,
+      "country": "Italy",
+      "championship_wins": 16,
+      "drivers": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": 4,
+      "name": "McLaren Racing",
+      "year_founded": 1963,
+      "country": "United Kingdom",
+      "championship_wins": 8,
+      "drivers": [
+        7,
+        8
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Aston Martin F1 Team",
+      "year_founded": 1959,
+      "country": "United Kingdom",
+      "championship_wins": 0,
+      "drivers": [
+        9,
+        10
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Alpine F1 Team",
+      "year_founded": 2016,
+      "country": "France",
+      "championship_wins": 0,
+      "drivers": [
+        11,
+        12
+      ]
+    },
+    {
+      "id": 7,
+      "name": "AlphaTauri",
+      "year_founded": 2006,
+      "country": "Italy",
+      "championship_wins": 0,
+      "drivers": [
+        13,
+        14
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Williams Racing",
+      "year_founded": 1977,
+      "country": "United Kingdom",
+      "championship_wins": 9,
+      "drivers": [
+        15,
+        16
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Alfa Romeo Racing",
+      "year_founded": 1950,
+      "country": "Switzerland",
+      "championship_wins": 2,
+      "drivers": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Haas F1 Team",
+      "year_founded": 2016,
+      "country": "United States",
+      "championship_wins": 0,
+      "drivers": [
+        19,
+        20
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Sauber",
+      "year_founded": 1970,
+      "country": "Switzerland",
+      "championship_wins": 0,
+      "drivers": []
+    },
+    {
+      "id": 12,
+      "name": "Toro Rosso",
+      "year_founded": 2006,
+      "country": "Italy",
+      "championship_wins": 0,
+      "drivers": []
+    },
+    {
+      "id": 13,
+      "name": "Force India",
+      "year_founded": 2008,
+      "country": "United Kingdom",
+      "championship_wins": 0,
+      "drivers": []
+    },
+    {
+      "id": 14,
+      "name": "Racing Point",
+      "year_founded": 2019,
+      "country": "United Kingdom",
+      "championship_wins": 0,
+      "drivers": []
+    },
+    {
+      "id": 15,
+      "name": "Minardi",
+      "year_founded": 1985,
+      "country": "Italy",
+      "championship_wins": 0,
+      "drivers": []
+    },
+    {
+      "id": 16,
+      "name": "Renault",
+      "year_founded": 1977,
+      "country": "France",
+      "championship_wins": 2,
+      "drivers": []
+    },
+    {
+      "id": 17,
+      "name": "HRT",
+      "year_founded": 2010,
+      "country": "Spain",
+      "championship_wins": 0,
+      "drivers": []
+    }
+  ]
+}
