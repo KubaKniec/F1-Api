@@ -2,6 +2,7 @@ import express from "express";
 import data from '../data.json' assert { type: 'json' };
 import { responseHandler, errorHandler } from "../handlers/ResponseHandler.js";
 import { saveData } from  "../handlers/DataSaver.js";
+import cors from "cors";
 
 
 export const RaceRouter = express.Router();
