@@ -5,10 +5,10 @@ import {DriverRouter} from "./Routes/DriverRouter.js";
 import {CircuitRouter} from "./Routes/CircuitRouter.js";
 import {ApolloServer} from "@apollo/server";
 import  {expressMiddleware} from "@apollo/server/express4"
-// import { corsOptions } from "./cors/corsConfig.js";
 import {resolvers} from "./graphql/resolvers/resolvers.js";
 import {readFileSync} from "fs";
 import cors from "cors";
+
 
 const app = new express();
 export const corsOptions = {
@@ -38,7 +38,7 @@ app.use("/circuit", cors(corsOptions), CircuitRouter);
 const  typeDefs = readFileSync("graphql/schemas/schema.graphql", {encoding: "utf-8"});
 const apolloServer = new ApolloServer({typeDefs, resolvers});
 await apolloServer.start();
-app.use('/graphql', express.json(), expressMiddleware(apolloServer));
+app.use('/graphql', express.json(), expressMiddleware(apolloServer)); //TODO DODAC FILTROWANIE, SORTOWANIE, MOZE PAGINACJA
 
 
 app.listen(8989, () => {
