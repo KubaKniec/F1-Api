@@ -36,8 +36,62 @@ type Constructor {
 }
 
 type Query {
-    circuits: [Circuit],
-    race: [Race]
-    driver: [Driver]
-    constructor: [Constructor]
+    circuits(filter: CircuitFilter, sort: SortInput, pagination: PaginationInput): [Circuit],
+    races(filter: RaceFilter, sort: SortInput, pagination: PaginationInput): [Race],
+    drivers(filter: DriverFilter, sort: SortInput, pagination: PaginationInput): [Driver],
+    constructors(filter: ConstructorFilter, sort: SortInput, pagination: PaginationInput): [Constructor]
+}
+
+input CircuitFilter {
+    id: IntFilter
+    name: StringFilter
+    country: StringFilter
+}
+
+input RaceFilter {
+    id: IntFilter
+    year: IntFilter
+    circuit: IntFilter
+}
+
+input DriverFilter {
+    id: IntFilter
+    nationality: StringFilter
+    race_wins: IntFilter
+}
+
+input ConstructorFilter {
+    id: IntFilter
+    country: StringFilter
+    championship_wins: IntFilter
+}
+
+input StringFilter {
+    eq: String
+    contains: String
+    neq: String
+    notContains: String
+}
+
+input IntFilter {
+    eq: Int
+    gt: Int
+    lt: Int
+    gte: Int
+    lte: Int
+}
+
+input SortInput {
+    field: String
+    order: SortOrder
+}
+
+enum SortOrder {
+    ASC
+    DESC
+}
+
+input PaginationInput {
+    limit: Int
+    offset: Int
 }

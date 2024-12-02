@@ -1,0 +1,84 @@
+{
+  "Race": [
+    {
+      "id": 1,
+      "Circuit": 1,
+      "year": 2023,
+      "winner": 1,
+      "second_place": 4,
+      "third_place": 5
+    },
+    {
+      "id": 2,
+      "Circuit": 2,
+      "year": 2023,
+      "winner": 2,
+      "second_place": 1,
+      "third_place": 3
+    },
+    {
+      "id": 3,
+      "Circuit": 3,
+      "year": 2023,
+      "winner": 1,
+      "second_place": 4,
+      "third_place": 5
+    },
+    {
+      "id": 4,
+      "Circuit": 4,
+      "year": 2023,
+      "winner": 3,
+      "second_place": 1,
+      "third_place": 2
+    },
+    {
+      "id": 5,
+      "Circuit": 5,
+      "year": 2023,
+      "winner": 4,
+      "second_place": 1,
+      "third_place": 2
+    },
+    {
+      "id": 6,
+      "Circuit": 6,
+      "year": 2023,
+      "winner": 1,
+      "second_place": 3,
+      "third_place": 5
+    },
+    {
+      "id": 7,
+      "Circuit": 7,
+      "year": 2023,
+      "winner": 1,
+      "second_place": 2,
+      "third_place": 4
+    },
+    {
+      "id": 8,
+      "Circuit": 8,
+      "year": 2023,
+      "winner": 2,
+      "second_place": 1,
+      "third_place": 4
+    },
+    {
+      "id": 9,
+      "Circuit": 9,
+      "year": 2023,
+      "winner": 1,
+      "second_place": 4,
+      "third_place": 3
+    },
+    {
+      "id": 10,
+      "Circuit": 10,
+      "year": 2023,
+      "winner": 6,
+      "second_place": 2,
+      "third_place": 1
+    }
+  ]
+}

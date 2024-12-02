@@ -1,0 +1,55 @@
+syntax = "proto3";
+package f1;
+
+service F1Service {
+  rpc GetCircuits(Empty) returns (CircuitList);
+  rpc GetDrivers(Empty) returns (DriverList);
+  rpc GetConstructors(Empty) returns (ConstructorList);
+  rpc GetRaces(Empty) returns (RaceList);
+}
+
+message Empty {}
+
+message Circuit {
+  int32 id = 1;
+  string name = 2;
+  string country = 3;
+}
+
+message Driver {
+  int32 id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string nationality = 4;
+  int32 race_wins = 5;
+}
+
+message Constructor {
+  int32 id = 1;
+  string name = 2;
+  string country = 3;
+  int32 championship_wins = 4;
+}
+
+message Race {
+  int32 id = 1;
+  int32 year = 2;
+  int32 circuit = 3;
+  int32 winner = 4;
+}
+
+message CircuitList {
+  repeated Circuit circuits = 1;
+}
+
+message DriverList {
+  repeated Driver drivers = 1;
+}
+
+message ConstructorList {
+  repeated Constructor constructors = 1;
+}
+
+message RaceList {
+  repeated Race races = 1;
+}
