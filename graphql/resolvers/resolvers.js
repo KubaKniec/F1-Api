@@ -2,25 +2,25 @@ import circuit from "../JSONsForGraphQl/Circuit.json" assert { type: "json" };
 import race from "../JSONsForGraphQl/race.json" assert { type: "json" };
 import driver from "../JSONsForGraphQl/driver.json" assert { type: "json" };
 import constructor from "../JSONsForGraphQl/Constructor.json"  assert { type: "json" };
-
+import { DateScalar } from "./DateScalar.js";
 
 export const resolvers = {
     Query: {
-        circuits: (_, { filter, sort, pagination }) => {
-            return applyAdvancedOperations(circuit.Circuit, filter, sort, pagination);
+        circuits: (_, { filter, sort }) => {
+            return applyAdvancedOperations(circuit.Circuit, filter, sort);
         },
-        races: (_, { filter, sort, pagination }) => {
-            return applyAdvancedOperations(race.Race, filter, sort, pagination);
+        races: (_, { filter, sort }) => {
+            return applyAdvancedOperations(race.Race, filter, sort);
         },
-        drivers: (_, { filter, sort, pagination }) => {
-            return applyAdvancedOperations(driver.Driver, filter, sort, pagination);
+        drivers: (_, { filter, sort }) => {
+            return applyAdvancedOperations(driver.Driver, filter, sort);
         },
-        constructors: (_, { filter, sort, pagination }) => {
-            return applyAdvancedOperations(constructor.Constructor, filter, sort, pagination);
+        constructors: (_, { filter, sort }) => {
+            return applyAdvancedOperations(constructor.Constructor, filter, sort);
         },
-    },
+    },Date: DateScalar,
 }
-function applyAdvancedOperations(data, filter, sort, pagination) {
+function applyAdvancedOperations(data, filter, sort) {
     let result = data;
 
     //Filtering
@@ -38,11 +38,6 @@ function applyAdvancedOperations(data, filter, sort, pagination) {
         });
     }
 
-    //Pagination
-    if (pagination) {
-        const { limit, offset } = pagination;
-        result = result.slice(offset || 0, limit ? (offset || 0) + limit : undefined);
-    }
 
     return result;
 }
@@ -69,5 +64,5 @@ function applyFilter(filter, fieldValue) {
     if ('gte' in filter && fieldValue < filter.gte) return false;                           // Sprawdza czy większe/równe.
     if ('lte' in filter && fieldValue > filter.lte) return false;                          // Sprawdza czy mniejsze/równe.
     return true;                                                                          // Jeśli wszystkie warunki są spełnione, zwraca true.
-
 }
+

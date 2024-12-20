@@ -17,7 +17,8 @@ type Driver {
     id: Int
     first_name: String
     last_name: String
-    date_of_birth: String
+#    date_of_birth: String
+    date_of_birth: Date
     nationality: String
     current_team: Constructor
     presious_teams: [Constructor]
@@ -25,6 +26,8 @@ type Driver {
     pole_positions: Int
 
 }
+
+scalar Date
 
 type Constructor {
     id: Int
@@ -36,10 +39,10 @@ type Constructor {
 }
 
 type Query {
-    circuits(filter: CircuitFilter, sort: SortInput, pagination: PaginationInput): [Circuit],
-    races(filter: RaceFilter, sort: SortInput, pagination: PaginationInput): [Race],
-    drivers(filter: DriverFilter, sort: SortInput, pagination: PaginationInput): [Driver],
-    constructors(filter: ConstructorFilter, sort: SortInput, pagination: PaginationInput): [Constructor]
+    circuits(filter: CircuitFilter, sort: SortInput): [Circuit],
+    races(filter: RaceFilter, sort: SortInput): [Race],
+    drivers(filter: DriverFilter, sort: SortInput): [Driver],
+    constructors(filter: ConstructorFilter, sort: SortInput): [Constructor]
 }
 
 input CircuitFilter {
@@ -69,7 +72,6 @@ input ConstructorFilter {
 input StringFilter {
     eq: String
     contains: String
-    neq: String
     notContains: String
 }
 
@@ -89,9 +91,4 @@ input SortInput {
 enum SortOrder {
     ASC
     DESC
-}
-
-input PaginationInput {
-    limit: Int
-    offset: Int
 }

@@ -4,7 +4,7 @@ import {RaceRouter} from "./Routes/RaceRouter.js";
 import {DriverRouter} from "./Routes/DriverRouter.js";
 import {CircuitRouter} from "./Routes/CircuitRouter.js";
 import {ApolloServer} from "@apollo/server";
-import  {expressMiddleware} from "@apollo/server/express4"
+import {expressMiddleware} from "@apollo/server/express4"
 import {resolvers} from "./graphql/resolvers/resolvers.js";
 import {readFileSync} from "fs";
 import cors from "cors";
