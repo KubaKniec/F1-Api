@@ -11,6 +11,7 @@ import cors from "cors";
 
 
 const app = new express();
+
 export const corsOptions = {
     // origin: "niePowinnoDzialc.pl",
     origin: "http://localhost:8989",
@@ -38,7 +39,7 @@ app.use("/circuit", cors(corsOptions), CircuitRouter);
 const  typeDefs = readFileSync("graphql/schemas/schema.graphql", {encoding: "utf-8"});
 const apolloServer = new ApolloServer({typeDefs, resolvers});
 await apolloServer.start();
-app.use('/graphql', express.json(), expressMiddleware(apolloServer)); //TODO DODAC FILTROWANIE, SORTOWANIE, MOZE PAGINACJA
+app.use('/graphql', express.json(), expressMiddleware(apolloServer));
 
 
 app.listen(8989, () => {
