@@ -4,6 +4,203 @@ import { responseHandler, errorHandler } from "../handlers/ResponseHandler.js";
 import { saveData } from  "../handlers/DataSaver.js";
 import cors from "cors";
 
+/**
+ * @swagger
+ * tags:
+ *   name: Race
+ *   description: API endpoints for managing races.
+ *
+ * /race:
+ *   get:
+ *     summary: Retrieve a list of races
+ *     description: Fetch all races or filter them by year using a query parameter.
+ *     parameters:
+ *       - in: query
+ *         name: year
+ *         schema:
+ *           type: string
+ *         description: Filter races by year.
+ *     responses:
+ *       200:
+ *         description: A list of races.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *                   year:
+ *                     type: integer
+ *                   Circuit:
+ *                     type: object
+ *                   winner:
+ *                     type: object
+ *                   second_place:
+ *                     type: object
+ *                   third_place:
+ *                     type: object
+ *       404:
+ *         description: No races found.
+ *   post:
+ *     summary: Create a new race
+ *     description: Add a new race along with the details of the winner, second place, and third place drivers.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               year:
+ *                 type: integer
+ *               winner:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *               second_place:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *               third_place:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *               Circuit:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *     responses:
+ *       201:
+ *         description: Race created successfully.
+ *
+ * /race/{id}:
+ *   get:
+ *     summary: Retrieve a specific race
+ *     description: Fetch a race by its ID along with details of the winner, second place, and third place drivers.
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: ID of the race to retrieve.
+ *     responses:
+ *       200:
+ *         description: Race details.
+ *       404:
+ *         description: Race not found.
+ *   put:
+ *     summary: Update a race
+ *     description: Update details of an existing race, including the winner, second place, third place drivers, and circuit.
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: ID of the race to update.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               year:
+ *                 type: integer
+ *               winner:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *               second_place:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *               third_place:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *               Circuit:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *     responses:
+ *       200:
+ *         description: Race updated successfully.
+ *       404:
+ *         description: Race not found.
+ *   patch:
+ *     summary: Partially update a race
+ *     description: Update one or more fields of an existing race.
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: ID of the race to update.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               year:
+ *                 type: integer
+ *               winner:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *               second_place:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *               third_place:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *               Circuit:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *     responses:
+ *       200:
+ *         description: Race updated successfully.
+ *       404:
+ *         description: Race not found.
+ *   delete:
+ *     summary: Delete a race
+ *     description: Remove a race from the database.
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: ID of the race to delete.
+ *     responses:
+ *       200:
+ *         description: Race deleted successfully.
+ *       404:
+ *         description: Race not found.
+ */
+
 
 export const RaceRouter = express.Router();
 

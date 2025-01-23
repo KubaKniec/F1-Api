@@ -3,6 +3,153 @@ import data from '../data.json' assert { type: 'json' };
 import { responseHandler, errorHandler } from "../handlers/ResponseHandler.js";
 import { saveData } from  "../handlers/DataSaver.js";
 
+/**
+ * @swagger
+ * tags:
+ *   name: Circuit
+ *   description: API endpoints for managing circuits.
+ *
+ * /circuit:
+ *   get:
+ *     summary: Retrieve a list of circuits
+ *     description: Fetch all circuits or filter them by name using a query parameter.
+ *     parameters:
+ *       - in: query
+ *         name: name
+ *         schema:
+ *           type: string
+ *         description: Filter circuits by name.
+ *     responses:
+ *       200:
+ *         description: A list of circuits.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *                   name:
+ *                     type: string
+ *       404:
+ *         description: No circuits found.
+ *   post:
+ *     summary: Create a new circuit
+ *     description: Add a new circuit to the database.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 example: "Silverstone"
+ *     responses:
+ *       201:
+ *         description: Circuit created successfully.
+ *
+ * /circuit/{id}:
+ *   put:
+ *     summary: Update a circuit
+ *     description: Update details of an existing circuit.
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: ID of the circuit to update.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Circuit updated successfully.
+ *       404:
+ *         description: Circuit not found.
+ *   patch:
+ *     summary: Partially update a circuit
+ *     description: Update one or more fields of an existing circuit.
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: ID of the circuit to update.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Circuit updated successfully.
+ *       404:
+ *         description: Circuit not found.
+ *   delete:
+ *     summary: Delete a circuit
+ *     description: Remove a circuit from the database.
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: ID of the circuit to delete.
+ *     responses:
+ *       200:
+ *         description: Circuit deleted successfully.
+ *       404:
+ *         description: Circuit not found.
+ *
+ * /circuit/{circuitId}/races:
+ *   get:
+ *     summary: Retrieve races for a specific circuit
+ *     description: Get a list of races associated with a given circuit ID, including detailed race information.
+ *     parameters:
+ *       - in: path
+ *         name: circuitId
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: The ID of the circuit to retrieve races for.
+ *     responses:
+ *       200:
+ *         description: A list of races for the circuit.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   winner:
+ *                     type: object
+ *                   second_place:
+ *                     type: object
+ *                   third_place:
+ *                     type: object
+ *                   Circuit:
+ *                     type: object
+ *       404:
+ *         description: No races found for this circuit.
+ */
+
 export const CircuitRouter = express.Router();
 
 CircuitRouter.use(responseHandler);

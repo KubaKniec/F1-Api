@@ -8,9 +8,12 @@ import {expressMiddleware} from "@apollo/server/express4"
 import {resolvers} from "./graphql/resolvers/resolvers.js";
 import {readFileSync} from "fs";
 import cors from "cors";
+import swaggerUi from 'swagger-ui-express';
+import { swaggerSpec } from './swaggerConfig.js';
 
 
 const app = new express();
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 export const corsOptions = {
     // origin: "niePowinnoDzialc.pl",
@@ -18,7 +21,7 @@ export const corsOptions = {
     methods: "PUT,PATCH,POST,DELETE", // nie ma get dla testu
     optionsSuccessStatus: 200
 }
-
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use(express.json());
 app.use(cors(corsOptions))
 
@@ -44,4 +47,8 @@ app.use('/graphql', express.json(), expressMiddleware(apolloServer));
 
 app.listen(8989, () => {
     console.log("Started on 8989")
+
+
 })
+
+
